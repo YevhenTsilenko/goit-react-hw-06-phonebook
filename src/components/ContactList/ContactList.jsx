@@ -25,7 +25,7 @@ function ContactList ({ contacts, onDelete }) {
 }
 
 const getFilteredContacts = (allContacts, filter) => {
-  const lowerCasedFilter = filter.toLocaleLowerCase();
+  const lowerCasedFilter = filter.toLocaleLowerCase().trim();
   return allContacts.filter(contact => contact.name.toLocaleLowerCase().includes(lowerCasedFilter))
 };
 

@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { filter } from '../../redux/actions';
+import { filterContacts } from '../../redux/actions';
 import PropTypes from 'prop-types';
 import styles from './Filter.module.css';
 
@@ -17,7 +17,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onChange: evt => dispatch(filter(evt.target.value)),
+    onChange: evt => dispatch(filterContacts(evt.target.value)),
 });
 
 Filter.propTypes = {
